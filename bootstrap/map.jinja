@@ -1,0 +1,19 @@
+{% load_yaml as config %}
+  user: kqualters
+  group: staff
+  home: /home/
+{% endload %}
+
+{% set gh = "https://github.com" %}
+{% set gh_ssh = "git@github.com" %}
+
+{% load_yaml as bootstrap %}
+  user: kqualters
+  group: {{ config.group }}
+  home: {{config.home}}{{ config.user }}
+  my_repo_name: bootstrap
+  git_home: {{gh_ssh}}:kevinqualters/bootstrap.git
+  homeshick: {{ gh }}/andsens/homeshick.git
+  ohmyzsh_repo: {{ gh }}/robbyrussell/oh-my-zsh.git
+  vundle_repo: {{ gh }}/gmarik/Vundle.vim.git
+{% endload %}
