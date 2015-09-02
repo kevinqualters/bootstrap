@@ -1,6 +1,6 @@
 {% load_yaml as config %}
-  user: kqualters
-  group: staff
+  user: kevin
+  group: kevin
   home: /home/
 {% endload %}
 
@@ -8,7 +8,7 @@
 {% set gh_ssh = "git@github.com" %}
 
 {% load_yaml as bootstrap %}
-  user: kqualters
+  user: kevin
   group: {{ config.group }}
   home: {{config.home}}{{ config.user }}
   my_repo_name: bootstrap
